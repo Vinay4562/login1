@@ -1,0 +1,444 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.header-container {
+  background-color: white;
+  padding: 20px;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  height: 90px;
+  margin-right: 20px;
+  padding-left: 80px;
+  padding-bottom: 10px;
+}
+
+h1 {
+  font-size: 35px;
+  margin: 0;
+  color: red;
+  text-decoration: underline;
+}
+
+nav {
+  display: flex;
+  justify-content: flex-end;
+  background-color: #4d9bf0;
+  font-weight: bold;
+  font-family: 'Times New Roman', Times, serif;
+  width: 96%;
+  padding: 0 15px;
+  margin: 0;
+  position: relative; /* Remove fixed position */
+  transform: scale(1.1);
+}
+
+nav ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+nav ul li {
+  transition: transform 0.3s ease;
+  font-size: 16px;
+}
+
+nav ul li:hover {
+  background-color: #4d9bf0;
+  transform: scale(1.1);
+  border-radius: 6px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color:white;
+  padding: 18px;
+  display: block;
+  border-radius: 5px;
+
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  z-index: 1;
+  border-radius: 5px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  font-size: 12px;
+}
+
+.dropdown-content a:hover {
+  background-color: #4d9bf0;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Content Section */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+#loginButton {
+  padding: 20px 20px;
+  background-color: #4d9bf0 ;
+  color: rgb(12, 12, 12);
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s;
+  font-size: 17px;
+}
+
+#loginButton:hover {
+  background-color: red;
+  transform: scale(1.1);
+  color: black;
+}
+
+/* Location container styles */
+.location-container {
+  display: flex;
+  height: 130px;
+  align-items: center;
+  background-color: #f9f9f9;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  margin-top: 0%;
+  padding-top: 0%;
+  animation: slideIn 0.5s ease;
+}
+
+/* Location icon styles */
+.location-icon {
+  margin-right: 10px;
+}
+
+/* Location details styles */
+.location-details {
+  flex: 1;
+  padding-top: 5px;
+}
+
+/* Coordinates styles */
+.coordinates {
+  font-weight: bold;
+}
+
+/* Map link styles */
+.map-link {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect for map link */
+.map-link:hover {
+  color: #0056b3;
+}
+
+/* Animation for location container */
+@keyframes slideIn {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.weather-container {
+  width: 300px;
+  height: 110px;
+  margin: 5px auto;
+  background-color: transparent;
+  border-radius: 10px;
+  padding-bottom: 20px;
+  padding-top: 10px;
+  text-align: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
+  margin-bottom: 0;
+}
+
+.location {
+  font-size: 20px;
+  font-weight: bold;
+  color: #e21111;
+}
+
+.temperature {
+  font-size: 15px;
+  margin: 1px 0;
+  color: red;
+  padding-top: 0;
+  margin-top: 0;
+}
+
+.weather-icon img {
+  width: 60px;
+  margin-top: 1px;
+  font-weight: 3px;
+  
+}
+
+.description {
+  font-size: 15px;
+  color: #555;
+}
+
+/* CSS for clock hover animation */
+.clock {
+  transition: transform 0.5s;
+  color: red;
+  font-weight: bold;
+}
+
+.clock:hover {
+  animation: pulse 0.5s infinite;
+  color: black;
+  font-weight: bold;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+.paragraph-container {
+  flex: 1;
+  margin-right: 20px;
+  font-size: 18px;
+}
+.single-photo-container img {
+  width: 100%; /* Set the width of the photo to 100% */
+  height: auto; /* Maintain the aspect ratio */
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+/* Image Scrolling Section */
+.image-scroll-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Modal styles */
+.modal {
+  display: none;
+  position: fixed;
+  cursor: pointer;
+  z-index: 1;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0,0.9);
+}
+
+/* Modal content */
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+/* Close button */
+.close {
+  color: #ccc;
+  float: right;
+  font-size: 30px;
+  font-weight: bold;
+  padding-right: 15px;
+}
+
+.close:hover,
+.close:focus {
+  color: #fff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Image Scrolling Section */
+.image-scroll-section {
+  background-color: #f8f9fa;
+  padding: 20px;
+  overflow: hidden; /* Hide overflow */
+  display: flex;
+  justify-content: center;
+}
+
+.image-scroll-wrapper {
+  border: 3px solid #928b8b; /* Add border around the wrapper */
+  overflow: hidden; /* Hide overflow of images */
+  width: 100%; /* Set the width to 80% or any desired width */
+  box-sizing: border-box; /* Include border in the element's total width and height */
+  position: relative; /* Needed for absolute positioning of the scroll container */
+  height: 320px; /* Set a height to match the images */
+  border-radius: 5px;
+}
+
+.image-scroll-container {
+  display: flex;
+  animation: scrollImages 20s linear infinite; /* Animation for scrolling */
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+.image-scroll-container img {
+  width: 350px; /* Fixed width */
+  height: 350px; /* Fixed height */
+  margin-right: 10px; /* Adjust spacing between images */
+  cursor: pointer;
+  display: inline-block;
+}
+
+@keyframes scrollImages {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+
+
+
+/* Footer Section */
+.footer {
+  background-color: #007bff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  bottom: 0;
+  width: 100%;
+  z-index: 1000; /* Ensure the footer is above other elements */
+}
+
+/* Adjust padding for the image scrolling section */
+.image-scroll-section {
+  background-color: #f8f9fa;
+  padding: 20px 20px 70px; /* Adjust bottom padding to make space for the footer */
+  overflow: hidden; /* Hide overflow */
+}
+
+/* Adjust bottom margin for the image scroll container */
+.image-scroll-container {
+  display: flex;
+  animation: scrollImages 20s linear infinite; /* Animation for scrolling */
+  margin-bottom: 20px; /* Add some space between images and footer */
+}
+
+
+#services{
+    
+  padding: 30px 0;
+}
+.sub-title{
+  padding: 0 550px;
+  font-family: 'Times New Roman', Times, serif;
+  transform: scale(1.1);
+}
+
+
+.services-list{
+  padding: 10px 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-gap: 60px;
+  margin-top: 50px;
+  transition: background 0.5s, transform 0.5s;
+  padding-right: 25px;
+}
+
+.services-list div{
+  background: #262626;
+  color: #fff;
+  padding: 40px ;
+  font-size: 15px;
+  font-weight: 300;
+  border-right: 10px;
+  border-radius: 70px 0 70px 0;
+  font-family: 'Times New Roman', Times, serif;
+
+}
+.services-list div h2{
+  color: #fff;
+  font-size: 30px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.services-list div:hover{
+  background: #007bff;
+  transform: translateY(-10px);
+}
